@@ -1,0 +1,282 @@
+{
+    "units":[
+        {
+            "id":"1",
+            "image_unit":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ6uGfK664RKX5x9g4yYMejDAIYZJ5D9d3dIhka1QJLLUjxZzTOMpst8t_zpma4vpdZ-k&usqp=CAU",
+            "name_units":"49st shock battalion",
+            "name_comander":"Vitaliy Dolhushin",
+            "specialization":"Repair of mountain assault agricultural machinery"
+        },
+        {
+            "id":"2",
+            "image_unit":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsOZVVckJBC2lchw9wdniaA01OPvOB5pypWgeHcEj_wmz65rJEGhJK_XOw8LOmHU831lQ&usqp=CAU",
+            "name_units":"1nd shock battalion",
+            "name_comander":"Denis Hryshchenko",
+            "specialization":"killing people"
+        },
+        {
+            "id":"3",
+            "image_unit":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRQVydrNgjzyhcuQUsBEtqCkQxhor3bYUF_6U_BuMIykXy12XlEpV981ENTOb28_XOts&usqp=CAU",
+            "name_units":"Company of Unmanned Aviation Complexes",
+            "name_comander":"Voznuy Artem",
+            "specialization":"shoot cool videos with the death of Rusaks and their techniques to raise the fighting spirit of the entire people"
+        },
+        {
+            "id":"4",
+            "image_unit":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsxz_iXszGqEoO2qxAal21DivGAlj5FsIzl2UTl6K7B3MsWkPhrga-IVpOCiDSo03upLY&usqp=CAU",
+            "name_units":"Intelligence company",
+            "name_comander":"Dima Bukov",
+            "specialization":"Top secret"
+        },
+        {
+            "id":"5",
+            "image_unit":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ivaNrn_-h5GQIV26W2oQM07bPrMprKfx3oWbSQt27_vC2ULB6d_wdcL4FqoXCBUOrOM&usqp=CAU",
+            "name_units":"Artillery support company",
+            "name_comander":"Olexandr Zagorenko",
+            "specialization":"landscape designer"
+        }
+    ],
+    "ItemsUnit":[
+        {
+            "id": "1",
+            "id_unit": "1",
+            "name": "Falcon II RF-5800H-MP (Radio station)",
+            "count": "2",
+            "delivery_date": "04.06.2023",
+            "price": "$205.000.000"
+        },
+        {
+            "id": "2",
+            "id_unit": "1",
+            "name": "Motorola T600 Talkabout Radio",
+            "count": "5",
+            "delivery_date": "10.07.2023",
+            "price": "$300.000"
+        },
+        {
+            "id": "3",
+            "id_unit": "1",
+            "name": "Baofeng UV-5R Dual Band Two Way Radio",
+            "count": "10",
+            "delivery_date": "15.08.2023",
+            "price": "$150.000"
+        },
+        {
+            "id": "4",
+            "id_unit": "1",
+            "name": "Midland GXT1000VP4 GMRS Two-Way Radio",
+            "count": "8",
+            "delivery_date": "20.09.2023",
+            "price": "$250.000"
+        },
+        {
+            "id": "5",
+            "id_unit": "1",
+            "name": "Kenwood TK-3400U16P ProTalk Portable UHF Radio",
+            "count": "4",
+            "delivery_date": "25.10.2023",
+            "price": "$350.000"
+        },
+        {
+            "id": "6",
+            "id_unit": "1",
+            "name": "Uniden BC365CRS 500 Channel Scanner",
+            "count": "6",
+            "delivery_date": "30.11.2023",
+            "price": "$200.000"
+        },
+        {
+            "id": "7",
+            "id_unit": "1",
+            "name": "BTECH UV-5X3 5 Watt Tri-Band Radio",
+            "count": "9",
+            "delivery_date": "05.12.2023",
+            "price": "$170.000"
+        },
+        {
+            "id": "8",
+            "id_unit": "1",
+            "name": "Yaesu FT-60R Dual Band Handheld 5W VHF / UHF Amateur Radio",
+            "count": "7",
+            "delivery_date": "10.01.2024",
+            "price": "$280.000"
+        },
+        {
+            "id": "9",
+            "id_unit": "1",
+            "name": "Icom IC-7300 HF/50MHz Transceiver",
+            "count": "3",
+            "delivery_date": "15.02.2024",
+            "price": "$1100.000"
+        },
+        {
+            "id": "10",
+            "id_unit": "1",
+            "name": "Retevis H-777 Two Way Radio",
+            "count": "12",
+            "delivery_date": "20.03.2024",
+            "price": "$160.000"
+        },
+        {
+            "id": "11",
+            "id_unit": "2",
+            "name": "Cobra HHRT50 Road Trip Cb Radio",
+            "count": "6",
+            "delivery_date": "25.04.2024",
+            "price": "$90.000"
+        },
+        {
+            "id": "12",
+            "id_unit": "2",
+            "name": "TYT MD-380 DMR Digital Radio",
+            "count": "8",
+            "delivery_date": "30.05.2024",
+            "price": "$130.000"
+        },
+        {
+            "id": "13",
+            "id_unit": "2",
+            "name": "Uniden BEARCAT 880 CB Radio",
+            "count": "5",
+            "delivery_date": "05.06.2024",
+            "price": "$140.000"
+        },
+        {
+            "id": "14",
+            "id_unit": "2",
+            "name": "Midland 75-822 40 Channel CB-Way Radio",
+            "count": "7",
+            "delivery_date": "10.07.2024",
+            "price": "$100.000"
+        },
+        {
+            "id": "15",
+            "id_unit": "3",
+            "name": "Baofeng BF-F8HP Dual Band Two-Way Radio",
+            "count": "10",
+            "delivery_date": "15.08.2024",
+            "price": "$110.000"
+        },
+        {
+            "id": "16",
+            "id_unit": "3",
+            "name": "Icom IC-2730A Dual Band VHF/UHF 50W Mobile Radio",
+            "count": "4",
+            "delivery_date": "20.09.2024",
+            "price": "$330.000"
+        },
+        {
+            "id": "17",
+            "id_unit": "3",
+            "name": "Yaesu FT-857D Amateur Radio Transceiver",
+            "count": "3",
+            "delivery_date": "25.10.2024",
+            "price": "$1000.000"
+        },
+        {
+            "id": "18",
+            "id_unit": "3",
+            "name": "Alinco DR-638HE Dual Band Mobile Ham Radio",
+            "count": "9",
+            "delivery_date": "30.11.2024",
+            "price": "$360.000"
+        },
+        {
+            "id": "19",
+            "id_unit": "1",
+            "name": "Kenwood TM-281A 144MHz FM Transceiver",
+            "count": "6",
+            "delivery_date": "05.12.2024",
+            "price": "$220.000"
+        },
+        {
+            "id": "20",
+            "id_unit": "2",
+            "name": "Retevis RT82 Dual Band DMR Digital Two Way Radio",
+            "count": "11",
+            "delivery_date": "10.01.2025",
+            "price": "$140.000"
+        },
+        {
+            "id": "21",
+            "id_unit": "2",
+            "name": "TYT TH-9800 PLUS Version Quad Band Mobile Radio",
+            "count": "7",
+            "delivery_date": "15.02.2025",
+            "price": "$220.000"
+        },
+        {
+            "id": "22",
+            "id_unit": "4",
+            "name": "BaoFeng BF-F8+ Dual-Band 136-174/400-520 MHz Ham Two-way Radio",
+            "count": "5",
+            "delivery_date": "20.03.2025",
+            "price": "$120.000"
+        },
+        {
+            "id": "23",
+            "id_unit": "4",
+            "name": "Uniden HomePatrol-2 Color Touchscreen Simple Program Digital Scanner",
+            "count": "4",
+            "delivery_date": "25.04.2025",
+            "price": "$500.000"
+        },
+        {
+            "id": "24",
+            "id_unit": "4",
+            "name": "Icom IC-7100 HF/50/144/440 MHz Mobile D-Star Amateur Radio Transceiver",
+            "count": "2",
+            "delivery_date": "30.05.2025",
+            "price": "$1100.000"
+        },
+        {
+            "id": "25",
+            "id_unit": "5",
+            "name": "Yaesu FTM-100DR DE 50W VHF/UHF/C4FM/FM Mobile Amateur Radio",
+            "count": "9",
+            "delivery_date": "05.06.2025",
+            "price": "$300.000"
+        },
+        {
+            "id": "26",
+            "id_unit": "4",
+            "name": "Kenwood TM-V71A 136-174/400-480 MHz Dual Band Amateur Mobile Transceiver",
+            "count": "6",
+            "delivery_date": "10.07.2025",
+            "price": "$380.000"
+        },
+        {
+            "id": "27",
+            "id_unit": "3",
+            "name": "Midland MXT400VP3 MicroMobile Bundle",
+            "count": "7",
+            "delivery_date": "15.08.2025",
+            "price": "$250.000"
+        },
+        {
+            "id": "28",
+            "id_unit": "3",
+            "name": "BTECH Mini UV-25X4 25 Watt Tri-Band Base, Mobile Radio",
+            "count": "8",
+            "delivery_date": "20.09.2025",
+            "price": "$200.000"
+        },
+        {
+            "id": "29",
+            "id_unit": "4",
+            "name": "Retevis RT97S Mini Mobile Radio Transceiver",
+            "count": "10",
+            "delivery_date": "25.10.2025",
+            "price": "$160.000"
+        },
+        {
+            "id": "30",
+            "id_unit": "2",
+            "name": "Uniden PRO401HH 40 Channel Handheld CB Radio",
+            "count": "12",
+            "delivery_date": "30.11.2025",
+            "price": "$70.000"
+        }
+    ]
+}
+
