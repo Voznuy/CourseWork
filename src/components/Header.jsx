@@ -14,7 +14,7 @@ export default function HomePage() {
                 <Navbar.Brand href="/">RACCOON</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/units">Units</Nav.Link>
-                    <Nav.Link href="/Gallery">Gallery</Nav.Link>
+                    <Nav.Link href="#gallery">Gallery</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
             </Container>

@@ -6,8 +6,6 @@ import "./Units.css"
 import "../components/UnitCard"
 import addUnitImage from '../assets/images/additem.png'
 import Image from 'react-bootstrap/Image';
-
-
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -47,7 +45,7 @@ export default function HomePage() {
                 ))
                 }
                 <button className="add-button" onClick={handleShow} >
-                        <img className="image-add-container" src={addUnitImage}></img>
+                    <img className="image-add-container" src={addUnitImage}></img>
                 </button>
             </div>
 

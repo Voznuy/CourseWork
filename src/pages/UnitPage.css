@@ -1,8 +1,17 @@
 .items-card-block{
-    padding: 10vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
     gap: 20px;
     align-items: center;
     justify-content: center;
+}
+
+.SecondNawBar{
+    display: grid;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.Searsh-input{
+    width: 20vw, min 100px;
 }

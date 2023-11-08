@@ -4,17 +4,19 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 
-function AddUnit({ show, handleClose }) {
+function AddItem({ show, handleClose }) {
     const [name, setName] = useState('');
-    const [specialization, setSpecialization] = useState('');
-    const [commanderName, setCommanderName] = useState('');
+    const [price, setPrice] = useState('');
+    const [count, setCount] = useState('');
+    const [date, setDate] = useState('');
 
 
     const handleSubmit = () => {
-        const unit = {
+        const item = {
             name,
-            specialization,
-            commanderName
+            price,
+            count,
+            date
         }
 
         handleClose();
@@ -26,28 +28,28 @@ function AddUnit({ show, handleClose }) {
         <>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>New unit</Modal.Title>
+                    <Modal.Title>New item</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="name_unit_id">
-                            <Form.Label>Name unit</Form.Label>
-                            <Form.Control type="text" placeholder="Example: 1st assault battalion" autoFocus />
+                            <Form.Label>Name item</Form.Label>
+                            <Form.Control type="text" placeholder="Name itemFalcon II RF-5800H-MP (Radio station)" autoFocus />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="specialization_unit_id">
-                            <Form.Label>Specialization</Form.Label>
-                            <Form.Control type="text" as="textarea" rows={3} placeholder='briefly about the unit' />
+                            <Form.Label>price</Form.Label>
+                            <Form.Control type="number" placeholder='$90.000' />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="image_unit_id">
-                            <Form.Label>Image</Form.Label>
-                            <Form.Control type="text" as="textarea" rows={3} placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRQVydrNgjzyhcuQUsBEtqCkQxhor3bYUF_6U_BuMIykXy12XlEpV981ENTOb28_XOts&usqp=CAU' />
+                            <Form.Label>count</Form.Label>
+                            <Form.Control type="number" placeholder='4'/>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="comanderName_unit_id">
-                            <Form.Label>Comander name</Form.Label>
-                            <Form.Control type="text" placeholder="Example: Tyler Durden" />
+                            <Form.Label>date</Form.Label>
+                            <Form.Control type="date" placeholder="04.06.2023" />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -56,7 +58,7 @@ function AddUnit({ show, handleClose }) {
                         Close
                     </Button>
                     <Button type='submit' variant="primary" onClick={handleClose}>
-                        Add unit
+                        Add item
                     </Button>
                 </Modal.Footer>
             </Modal>
@@ -64,4 +66,4 @@ function AddUnit({ show, handleClose }) {
     );
 }
 
-export default AddUnit;
+export default AddItem;
