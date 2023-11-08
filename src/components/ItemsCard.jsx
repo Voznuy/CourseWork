@@ -7,13 +7,13 @@ function ItemCard({ item }) {
                 width: '100%',
                 height: '200px'
             }}>
-            <Card.Header>Name item{item.name}</Card.Header>
+            <Card.Header>{item.name}</Card.Header>
             <Card.Body>
-                <Card.Title>Price item{item.price}</Card.Title>
+                <Card.Title>Price item: {item.price}</Card.Title>
                 <Card.Text>
-                    Count item {item.count}
+                    Count item: {item.count}
                     <br></br>
-                    Delivery date {item.delivery_date}
+                    Delivery date: {item.delivery_date}
                 </Card.Text>
             </Card.Body>
         </Card>
