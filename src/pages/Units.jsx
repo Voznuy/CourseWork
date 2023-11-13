@@ -5,10 +5,8 @@ import "./HomePage.css"
 import "./Units.css"
 import "../components/UnitCard"
 import addUnitImage from '../assets/images/additem.png'
-import Image from 'react-bootstrap/Image';
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import AddUnit from "../components/AddUnit";
 
 

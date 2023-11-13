@@ -19,7 +19,7 @@ export default function UnitPage() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const {id} = useParams();
+    const { id } = useParams();
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
 
@@ -30,7 +30,7 @@ export default function UnitPage() {
             delivery_date: item.delivery_date,
             price: item.price
         }));
-        
+
         const worksheet = XLSX.utils.json_to_sheet(dataToExport);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
@@ -38,7 +38,6 @@ export default function UnitPage() {
         XLSX.writeFile(workbook, namexlsx);
     };
 
-    
     useEffect(() => {
         axios.get(`http://localhost:5000/ItemsUnit?id_unit=${id}`)
             .then(res => {
@@ -48,22 +47,30 @@ export default function UnitPage() {
             .catch(e => console.log(e));
     }, []);
 
-    
-
-
     const handleSearchInputChange = (event) => {
         const searchText = event.target.value;
         const filteredItems = serchedItems(items, searchText);
         setFilteredItems(filteredItems);
     };
 
-    const addItemInState = (item)=>{
-        setItems(prevItems=>[...prevItems, item]);
+    const editItemInState = (id, editedItem) => {
+        setItems(prevItems => prevItems.map(item => item.id === id ? { ...item, ...editedItem } : item));
+        setFilteredItems(prevItems => prevItems.map(item => item.id === id ? { ...item, ...editedItem } : item));
+    };
+
+    const deleteItemInState = (id) => {
+        setItems(prevItems => prevItems.filter(item => item.id !== id));
+        setFilteredItems(prevItems => prevItems.filter(item => item.id !== id));
+    };
+
+    const addItemInState = (item) => {
+        setItems(prevItems => [...prevItems, item]);
+        setFilteredItems(prevItems => [...prevItems, item]);
     };
 
     return (
         <>
-            <AddItem show={show} handleClose={handleClose} onDone={addItemInState}/>
+            <AddItem show={show} handleClose={handleClose} onDone={addItemInState} />
             <Header />
             <div className="SecondNawBar">
 
@@ -85,14 +92,11 @@ export default function UnitPage() {
             </div>
 
             <div className="items-card-block">
-
-                {filteredItems && filteredItems?.map(item => (
+                {(filteredItems || items).map(item => (
                     <div>
-                        <ItemsCard key={item.id} item={item} />
+                        <ItemsCard key={item.id} item={item} onEdit={editItemInState} onDelete={deleteItemInState} />
                     </div>
-                ))
-                }
-
+                ))}
             </div>
         </>
     )
