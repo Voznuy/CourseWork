@@ -30,7 +30,6 @@ export default function HomePage() {
     }, [])
     return (
         <>
-
             <AddUnit show={show} handleClose={handleClose} />
             <Header />
             <div className="unit-container">
