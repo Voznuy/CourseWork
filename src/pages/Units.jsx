@@ -12,13 +12,22 @@ import AddUnit from "../components/AddUnit";
 
 export default function HomePage() {
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        axios.get("http://localhost:5000/units")
+            .then(res => {
+                setUnits(res.data)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        setShow(false);
+    };
     const handleShow = () => setShow(true);
     const [units, setUnits] = useState([]);
 
     function handleClick(e, data) {
         console.log(data.foo);
-      }
+    }
 
     useEffect(() => {
         axios.get("http://localhost:5000/units")
