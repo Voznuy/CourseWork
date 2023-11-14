@@ -88,9 +88,7 @@ export default function UnitPage() {
                         <Button variant="dark" onClick={handleShow}>Add item</Button>
                     </InputGroup>
                 </div>
-
             </div>
-
             <div className="items-card-block">
                 {(filteredItems || items).map(item => (
                     <div>

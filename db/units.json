@@ -46,14 +46,6 @@
       "price": "3232"
     },
     {
-      "id": "2",
-      "id_unit": "1",
-      "name": "Motorola T600 Talkabout Radio",
-      "count": "5",
-      "delivery_date": "10.07.2023",
-      "price": "300.000"
-    },
-    {
       "id": "3",
       "id_unit": "1",
       "name": "Baofeng UV-5R Dual Band Two Way Radio",
@@ -113,7 +105,7 @@
       "id": "10",
       "id_unit": "1",
       "name": "Retevis H-777 Two Way Radio",
-      "count": "12",
+      "count": "10",
       "delivery_date": "20.03.2024",
       "price": "160.000"
     },
@@ -124,14 +116,6 @@
       "count": "6",
       "delivery_date": "25.04.2024",
       "price": "90.000"
-    },
-    {
-      "id": "12",
-      "id_unit": "2",
-      "name": "TYT MD-380 DMR Digital Radio",
-      "count": "8",
-      "delivery_date": "30.05.2024",
-      "price": "130.000"
     },
     {
       "id": "13",
@@ -260,6 +244,22 @@
       "count": "10",
       "delivery_date": "25.10.2025",
       "price": "160.000"
+    },
+    {
+      "name": "5345",
+      "price": "5434",
+      "count": "3",
+      "delivery_date": "4333-03-31",
+      "id_unit": "Jz6zIG3",
+      "id": "NubcM_5"
+    },
+    {
+      "name": "sdc",
+      "price": "3233",
+      "count": "4",
+      "delivery_date": "2023-11-11",
+      "id_unit": "X36HJiP",
+      "id": "s6Lotc3"
     }
   ]
 }

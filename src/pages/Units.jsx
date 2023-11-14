@@ -4,11 +4,10 @@ import UnitCard from '../components/UnitCard'
 import "./HomePage.css"
 import "./Units.css"
 import "../components/UnitCard"
-import addUnitImage from '../assets/images/additem.png'
+import addUnitImage from '../assets/images/additem2.png'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import AddUnit from "../components/AddUnit";
-
 
 
 export default function HomePage() {
@@ -16,6 +15,10 @@ export default function HomePage() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [units, setUnits] = useState([]);
+
+    function handleClick(e, data) {
+        console.log(data.foo);
+      }
 
     useEffect(() => {
         axios.get("http://localhost:5000/units")
@@ -26,13 +29,12 @@ export default function HomePage() {
                 console.log(error)
             })
     }, [])
+
     return (
         <>
             <AddUnit show={show} handleClose={handleClose} />
             <Header />
             <div className="unit-container">
-
-
                 {units?.map(value => (
                     <Link to={`/unit/${value.id}`}>
                         <div className="unit-card">
@@ -45,8 +47,6 @@ export default function HomePage() {
                     <img className="image-add-container" src={addUnitImage}></img>
                 </button>
             </div>
-
-
         </>
     )
 }

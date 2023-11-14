@@ -2,24 +2,43 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import axios from 'axios';
 
-
-function AddUnit({ show, handleClose }) {
-    const [name, setName] = useState('');
+function AddUnit({ show, handleClose, onDone }) {
+    const [name_units, setName] = useState('');
     const [specialization, setSpecialization] = useState('');
-    const [commanderName, setCommanderName] = useState('');
+    const [image_unit, setImage] = useState('');
+    const [name_comander, setCommanderName] = useState('');
 
 
     const handleSubmit = () => {
         const unit = {
-            name,
+            name_units,
             specialization,
-            commanderName
+            image_unit,
+            name_comander
         }
+
+        handleClose();
+
+        addNewUnit(unit)
+            .then((res) => {
+                console.log(res);
+                onDone(res.data);
+            })
+            .catch(err => console.log(err));
 
         handleClose();
     };;
 
+    const addNewUnit = async (unit) => {
+        try {
+            const response = await axios.post('http://localhost:5000/units', unit);
+            return response;
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
 
     return (
@@ -32,22 +51,43 @@ function AddUnit({ show, handleClose }) {
                     <Form>
                         <Form.Group className="mb-3" controlId="name_unit_id">
                             <Form.Label>Name unit</Form.Label>
-                            <Form.Control type="text" placeholder="Example: 1st assault battalion" autoFocus />
+                            <Form.Control
+                                type="text"
+                                placeholder="Example: 1st assault battalion"
+                                onChange={(e) => setName(e.target.value)}
+                                autoFocus
+                            />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="specialization_unit_id">
                             <Form.Label>Specialization</Form.Label>
-                            <Form.Control type="text" as="textarea" rows={3} placeholder='briefly about the unit' />
+                            <Form.Control
+                                type="text"
+                                as="textarea"
+                                rows={3}
+                                placeholder='Briefly about the unit'
+                                onChange={(e) => setSpecialization(e.target.value)}
+                            />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="image_unit_id">
                             <Form.Label>Image</Form.Label>
-                            <Form.Control type="text" as="textarea" rows={3} placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRQVydrNgjzyhcuQUsBEtqCkQxhor3bYUF_6U_BuMIykXy12XlEpV981ENTOb28_XOts&usqp=CAU' />
+                            <Form.Control
+                                type="text"
+                                as="textarea"
+                                rows={3}
+                                placeholder='https://example.com/image.jpg'
+                                onChange={(e) => setImage(e.target.value)}
+                            />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="comanderName_unit_id">
-                            <Form.Label>Comander name</Form.Label>
-                            <Form.Control type="text" placeholder="Example: Tyler Durden" />
+                            <Form.Label>Commander name</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Example: Tyler Durden"
+                                onChange={(e) => setCommanderName(e.target.value)}
+                            />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -55,7 +95,7 @@ function AddUnit({ show, handleClose }) {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button type='submit' variant="primary" onClick={handleClose}>
+                    <Button type='submit' variant="primary" onClick={handleSubmit}>
                         Add unit
                     </Button>
                 </Modal.Footer>

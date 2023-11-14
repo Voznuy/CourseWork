@@ -15,3 +15,7 @@
 .Searsh-input{
     width: 20vw, min 100px;
 }
+
+.delete-unit-button{
+    width: 450;
+}

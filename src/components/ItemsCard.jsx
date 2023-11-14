@@ -13,7 +13,7 @@ function ItemCard({ item, onEdit, onDelete }) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    
     const handleDelete = () => {
         deleteItem(item.id)
             .then(response => {

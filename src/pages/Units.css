@@ -21,6 +21,9 @@
 .image-add-container{
     width: 250px;
     height: 250px;
+    background-color: black;
+    border-radius: 10%;
 }
+
 
 
