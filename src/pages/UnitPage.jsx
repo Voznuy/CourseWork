@@ -11,6 +11,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import importSVG from '../assets/images/import.svg'
 import AddItem from '../components/AddItem.jsx'
 import * as XLSX from 'xlsx';
+import { ItemsUnitApi } from "../API/api.js";
 
 const serchedItems = (items, searchText) => items.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()));
 
@@ -39,7 +40,7 @@ export default function UnitPage() {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/ItemsUnit?id_unit=${id}`)
+        axios.get(`${ItemsUnitApi}?id_unit=${id}`)
             .then(res => {
                 setItems(res.data)
                 setFilteredItems(res.data)

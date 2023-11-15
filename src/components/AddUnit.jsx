@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
+import { unitsApi } from '../API/api';
 
 function AddUnit({ show, handleClose, onDone }) {
     const [name_units, setName] = useState('');
@@ -33,7 +34,7 @@ function AddUnit({ show, handleClose, onDone }) {
 
     const addNewUnit = async (unit) => {
         try {
-            const response = await axios.post('http://localhost:5000/units', unit);
+            const response = await axios.post(unitsApi, unit);
             return response;
         } catch (error) {
             console.error(error);

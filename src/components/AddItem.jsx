@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { ItemsUnitApi } from '../API/api';
 
 function AddItem({ show, handleClose, onDone }) {
     const { id } = useParams();
@@ -34,7 +35,7 @@ function AddItem({ show, handleClose, onDone }) {
 
     const addNewItem = async (item) => {
         try {
-            const response = await axios.post('http://localhost:5000/ItemsUnit', item);
+            const response = await axios.post(ItemsUnitApi, item);
             return response;
         } catch (error) {
             console.error(error);

@@ -3,9 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
+import { ItemsUnitApi } from "../API/api";
 
 const updateItem = (id, updatedItem) => (
-    axios.put(`http://localhost:5000/ItemsUnit/${id}`, updatedItem)
+    axios.put(`${ItemsUnitApi}/${id}`, updatedItem)
 );
 
 function EditItem({ show, handleClose, item, onEdit }) {

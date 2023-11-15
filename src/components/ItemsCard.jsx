@@ -4,9 +4,10 @@ import './ItemCard.css'
 import EditItem from './EditItem';
 import { useState } from 'react';
 import axios from 'axios';
+import { ItemsUnitApi } from '../API/api';
 
 const deleteItem = (id) => (
-    axios.delete(`http://localhost:5000/ItemsUnit/${id}`)
+    axios.delete(`${ItemsUnitApi}/${id}`)
 );
 
 function ItemCard({ item, onEdit, onDelete }) {

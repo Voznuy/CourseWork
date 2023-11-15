@@ -8,12 +8,13 @@ import addUnitImage from '../assets/images/additem2.png'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import AddUnit from "../components/AddUnit";
+import {unitsApi} from "../API/api";
 
 
 export default function HomePage() {
     const [show, setShow] = useState(false);
     const handleClose = () => {
-        axios.get("http://localhost:5000/units")
+        axios.get(unitsApi)
             .then(res => {
                 setUnits(res.data)
             })
@@ -30,7 +31,7 @@ export default function HomePage() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:5000/units")
+        axios.get(unitsApi)
             .then(res => {
                 setUnits(res.data)
             })

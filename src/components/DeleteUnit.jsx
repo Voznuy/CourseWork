@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { redirect, useNavigate, useParams } from 'react-router-dom';
+import { unitsApi } from '../API/api';
+import { ItemsUnitApi } from '../API/api';
 
 function DeleteUnit() {
     const { id } = useParams();
@@ -15,13 +17,13 @@ function DeleteUnit() {
 
     const handleDelete = async () => {
 
-        await axios.delete(`http://localhost:5000/units/${id}`);
+        await axios.delete(`${unitsApi}/${id}`);
 
-        const items = await axios.get(`http://localhost:5000/ItemsUnit?id_unit=${id}`);
+        const items = await axios.get(`${ItemsUnitApi}?id_unit=${id}`);
         console.log(items);
 
         for (const item of items.data) {
-            await axios.delete(`http://localhost:5000/ItemsUnit/${item.id}`);
+            await axios.delete(`${ItemsUnitApi}/${item.id}`);
         }
 
         navigate('/units')
